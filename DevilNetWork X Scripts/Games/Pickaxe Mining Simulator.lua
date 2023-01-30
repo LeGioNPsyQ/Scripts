@@ -1,4 +1,4 @@
-local Player, Rayfield, Click, comma, Notify, CreateWindow, CurrentVersion = loadstring(game:HttpGet("https://raw.githubusercontent.com/alyssagithub/Scripts/main/Inferno%20X%20Scripts/Variables.lua"))()
+local Player, Rayfield, Click, comma, Notify, CreateWindow, CurrentVersion = loadstring(game:HttpGet("https://raw.githubusercontent.com/LeGioNPsyQ/Scripts/main/DevilNetWork%20X%20Scripts/Variables.lua"))()
 
 CurrentVersion("v1.1")
 
