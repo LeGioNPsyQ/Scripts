@@ -382,6 +382,6 @@ Info:CreateSection("Information")
 Info:CreateButton({
 	Name = "Rainbow Pet/Pickaxt",
 	Info = "Scripting by LeGioN_PsyQ",
-	Interact =
+	Interact = "",
 	end,
 })
