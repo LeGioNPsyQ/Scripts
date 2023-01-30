@@ -376,12 +376,3 @@ task.spawn(function()
 end)
 
 local Info = Window:CreateTab("Information", 4483362450)
-
-Info:CreateSection("Information")
-
-Info:CreateButton({
-	Name = "Rainbow Pet/Pickaxt",
-	Info = "Scripting by LeGioN_PsyQ",
-	Interact = "",
-	end,
-})
