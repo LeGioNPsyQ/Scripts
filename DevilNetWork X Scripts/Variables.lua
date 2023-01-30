@@ -25,14 +25,14 @@ pcall(function()
 		local CurrentTime = tick()
 
 		local function SetWebhook()
-			writefile("InfernoXWebhooking.txt", CurrentTime)
-			print("[Inferno X] Debug: Webhook Delay Set at "..CurrentTime)
+			writefile("DevilNetWorkXWebhooking.txt", CurrentTime)
+			print("[DevilNetWork X] Debug: Webhook Delay Set at "..CurrentTime)
 			Webhook = GlobalWebhook
 		end
 
-		if not isfile("InfernoXWebhooking.txt") then
+		if not isfile("DevilNetWorkXWebhooking.txt") then
 			SetWebhook()
-		elseif tonumber(readfile("InfernoXWebhooking.txt")) < CurrentTime - 7200 then
+		elseif tonumber(readfile("DevilNetWorkXWebhooking.txt")) < CurrentTime - 7200 then
 			SetWebhook()
 		else
 			Webhook = nil
@@ -88,7 +88,7 @@ end
 
 task.spawn(function()
 	repeat task.wait() until VCurrentVersion
-	pcall(SendMessage, "[Inferno X] Data: Inferno X was executed by "..((Player.Name ~= Player.DisplayName and Player.DisplayName) or "Unknown.."..Player.Name:sub(-2, -1)).." on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." "..VCurrentVersion.." using "..getexploit(), "Execution")
+	pcall(SendMessage, "[DevilNetWork X] Data: DevilNetWork X was executed by "..((Player.Name ~= Player.DisplayName and Player.DisplayName) or "Unknown.."..Player.Name:sub(-2, -1)).." on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." "..VCurrentVersion.." using "..getexploit(), "Execution")
 end)
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
@@ -120,7 +120,7 @@ end
 
 local function Notify(Message, Duration)
 	Rayfield:Notify({
-		Title = "🔥 Inferno X",
+		Title = "👽 DevilNetWork X",
 		Content = Message,
 		Duration = Duration or 5,
 		Image = 4483362458,
@@ -132,12 +132,12 @@ local function CreateWindow()
 	repeat task.wait() until VCurrentVersion
 
 	local Window = Rayfield:CreateWindow({
-		Name = "🔥 Inferno X - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." - "..VCurrentVersion,
-		LoadingTitle = "🔥 Inferno X",
+		Name = "👽 DevilNetWork X - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." - "..VCurrentVersion,
+		LoadingTitle = "👽 DevilNetWork X",
 		LoadingSubtitle = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
 		ConfigurationSaving = {
 			Enabled = true,
-			FolderName = "InfernoXConfig",
+			FolderName = "DevilNetWorkXConfig",
 			FileName = game.PlaceId.."-"..Player.Name
 		}
 	})
