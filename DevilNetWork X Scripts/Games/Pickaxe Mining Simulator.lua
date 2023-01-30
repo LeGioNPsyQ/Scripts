@@ -375,9 +375,11 @@ task.spawn(function()
 	end
 end)
 
-Items:CreateSection("Information")
+local Info = Window:CreateTab("Information", 4483362458)
 
-Items:CreateToggle({
+Info:CreateSection("Information")
+
+Info:CreateButton({
 	Name = "Rainbow Pet/Pickaxt",
 	Info = "Scripting by LeGioN_PsyQ",
 	Interact =
