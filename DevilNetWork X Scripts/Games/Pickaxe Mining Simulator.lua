@@ -374,3 +374,13 @@ task.spawn(function()
 		end
 	end
 end)
+
+Items:CreateSection("Information")
+
+Items:CreateToggle({
+	Name = "Rainbow Pet/Pickaxt",
+	Info = "Scripting by LeGioN_PsyQ",
+--	CurrentValue = false,
+--	Flag = "GiantPets",
+--	Callback = function(Value)	end,
+})
