@@ -8,14 +8,14 @@ local Games = {
 
 if Games[game.PlaceId] then
 	game.StarterGui:SetCore("SendNotification", {
-	    Title = "DevilNetWork X Notification";
+	    Title = "👽 LeGioN Hub X Notification";
 	    Text = "Script is loaded";
 	    Duration = 10;
     })
 	loadstring(game:HttpGet(Games[game.PlaceId]))()
 else
 	game.StarterGui:SetCore("SendNotification", {
-	    Title = "DevilNetWork X Notify";
+	    Title = "👽 LeGioN Hub X Notify";
 	    Text = "Game not supported";
 	    Duration = 10;
     })
