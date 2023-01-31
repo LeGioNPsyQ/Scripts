@@ -12,8 +12,8 @@ local function CurrentVersion(v)
 	end
 end
 
-local GlobalWebhookUnsplit = "https://discord.com/api/webhooks/1058223702904422491/AFT8kFAI{jaoim7QlS6YPPE-Cv-faXF-ymMLgGwaeJVop8soRwuflYc5aazFK9jaEjqmB" -- this is literally in a private channel dumbasses
-local SuggestionsWebhookUnsplit = "https://discord.com/api/webhooks/1058223889756471316/fPntTW{_aNzGAaTPS8HILTRRS_8VoFQreBhrwhS04kQMTRrkNgBqpNLGWwn-5jwpUR2NI"
+local GlobalWebhookUnsplit = "https://discord.com/api/webhooks/1069935535348518912/_OoOuKi65ROel9SQ77_qZqvTDV5N6_ahVJFb-DoSQeY4lukyC0fcfO0bd1D0NabtXiZR" -- this is literally in a private channel dumbasses
+local SuggestionsWebhookUnsplit = "https://discord.com/api/webhooks/1069935684749639730/Ui7Ycm01OoF_RYNMyclZfeINQO69UdBAKdR_k0Wd4O_Xi8q5oyc5B7ELRLysIXPF-Asn"
 
 local GlobalWebhook = GlobalWebhookUnsplit:split("{")[1]..GlobalWebhookUnsplit:split("{")[2]
 local SuggestionsWebhook = SuggestionsWebhookUnsplit:split("{")[1]..SuggestionsWebhookUnsplit:split("{")[2]
@@ -25,14 +25,14 @@ pcall(function()
 		local CurrentTime = tick()
 
 		local function SetWebhook()
-			writefile("DevilNetWorkXWebhooking.txt", CurrentTime)
-			print("[DevilNetWork X] Debug: Webhook Delay Set at "..CurrentTime)
+			writefile("LeGioNHubXWebhooking.txt", CurrentTime)
+			print("[LeGioN Hub X] Debug: Webhook Delay Set at "..CurrentTime)
 			Webhook = GlobalWebhook
 		end
 
-		if not isfile("DevilNetWorkXWebhooking.txt") then
+		if not isfile("LeGioNHubXWebhooking.txt") then
 			SetWebhook()
-		elseif tonumber(readfile("DevilNetWorkXWebhooking.txt")) < CurrentTime - 7200 then
+		elseif tonumber(readfile("LeGioNHubXWebhooking.txt")) < CurrentTime - 7200 then
 			SetWebhook()
 		else
 			Webhook = nil
@@ -60,7 +60,7 @@ local function getexploit()
 		("Other")
 end
 
-print("[Inferno X] Debug: Detected Executor: "..getexploit())
+print("[LeGioN Hub X] Debug: Detected Executor: "..getexploit())
 
 function SendMessage(Message, Botname)
 	local Name
@@ -88,7 +88,7 @@ end
 
 task.spawn(function()
 	repeat task.wait() until VCurrentVersion
-	pcall(SendMessage, "[DevilNetWork X] Data: DevilNetWork X was executed by "..((Player.Name ~= Player.DisplayName and Player.DisplayName) or "Unknown.."..Player.Name:sub(-2, -1)).." on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." "..VCurrentVersion.." using "..getexploit(), "Execution")
+	pcall(SendMessage, "[LeGioN Hub X] Data: LeGioN Hub X was executed by "..((Player.Name ~= Player.DisplayName and Player.DisplayName) or "Unknown.."..Player.Name:sub(-2, -1)).." on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." "..VCurrentVersion.." using "..getexploit(), "Execution")
 end)
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
@@ -120,7 +120,7 @@ end
 
 local function Notify(Message, Duration)
 	Rayfield:Notify({
-		Title = "👽 DevilNetWork X",
+		Title = "👽 LeGioN Hub X",
 		Content = Message,
 		Duration = Duration or 5,
 		Image = 4483362458,
@@ -132,12 +132,12 @@ local function CreateWindow()
 	repeat task.wait() until VCurrentVersion
 
 	local Window = Rayfield:CreateWindow({
-		Name = "👽 DevilNetWork X - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." - "..VCurrentVersion,
-		LoadingTitle = "👽 DevilNetWork X",
+		Name = "👽 LeGioN Hub X - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." - "..VCurrentVersion,
+		LoadingTitle = "👽 LeGioN Hub X",
 		LoadingSubtitle = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
 		ConfigurationSaving = {
 			Enabled = true,
-			FolderName = "DevilNetWorkXConfig",
+			FolderName = "LeGioNHubXConfig",
 			FileName = game.PlaceId.."-"..Player.Name
 		}
 	})
@@ -313,19 +313,19 @@ local function CreateWindow()
 
 							local function SetSuggestionsWebhook()
 								Webhook = SuggestionsWebhook
-								local success, result = pcall(SendMessage, "[Inferno X] Data: "..((Player.Name ~= Player.DisplayName and Player.DisplayName) or "Unknown.."..Player.Name:sub(-2, -1)).." suggested "..Text.." on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, "Suggestion")
+								local success, result = pcall(SendMessage, "[LeGioN Hub X] Data: "..((Player.Name ~= Player.DisplayName and Player.DisplayName) or "Unknown.."..Player.Name:sub(-2, -1)).." suggested "..Text.." on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, "Suggestion")
 								if success then
 									Notify("Successfully Sent Suggestion", 5)
-									writefile("InfernoXWebhooking2.txt", CurrentTime)
-									print("[Inferno X] Debug: Webhook Delay Set at "..CurrentTime)
+									writefile("LeGioNHubXWebhooking2.txt", CurrentTime)
+									print("[LeGioN Hub X] Debug: Webhook Delay Set at "..CurrentTime)
 								else
 									Notify("Unsuccessful Sending Suggestion, Error: "..result, 5)
 								end
 							end
 
-							if not isfile("InfernoXWebhooking2.txt") then
+							if not isfile("LeGioNHubXWebhooking2.txt") then
 								SetSuggestionsWebhook()
-							elseif tonumber(readfile("InfernoXWebhooking2.txt")) < CurrentTime - 86400 then
+							elseif tonumber(readfile("LeGioNHubXWebhooking2.txt")) < CurrentTime - 86400 then
 								SetSuggestionsWebhook()
 							else
 								Webhook = nil
