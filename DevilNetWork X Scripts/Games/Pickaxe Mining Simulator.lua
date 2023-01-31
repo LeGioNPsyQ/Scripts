@@ -374,3 +374,4 @@ task.spawn(function()
 		end
 	end
 end)
+local Info = Window:CreateTab("Information", 4483362458)
