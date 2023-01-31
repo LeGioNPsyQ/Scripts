@@ -25,14 +25,14 @@ pcall(function()
 		local CurrentTime = tick()
 
 		local function SetWebhook()
-			writefile("InfernoXWebhooking.txt", CurrentTime)
-			print("[Inferno X] Debug: Webhook Delay Set at "..CurrentTime)
+			writefile("LeGioNHubWebhooking.txt", CurrentTime)
+			print("[LeGioN Hub] Debug: Webhook Delay Set at "..CurrentTime)
 			Webhook = GlobalWebhook
 		end
 
-		if not isfile("InfernoXWebhooking.txt") then
+		if not isfile("LeGioNHubWebhooking.txt") then
 			SetWebhook()
-		elseif tonumber(readfile("InfernoXWebhooking.txt")) < CurrentTime - 7200 then
+		elseif tonumber(readfile("LeGioNHubWebhooking.txt")) < CurrentTime - 7200 then
 			SetWebhook()
 		else
 			Webhook = nil
@@ -60,7 +60,7 @@ local function getexploit()
 		("Other")
 end
 
-print("[Inferno X] Debug: Detected Executor: "..getexploit())
+print("[LeGioN Hub] Debug: Detected Executor: "..getexploit())
 
 function SendMessage(Message, Botname)
 	local Name
@@ -88,7 +88,7 @@ end
 
 task.spawn(function()
 	repeat task.wait() until VCurrentVersion
-	pcall(SendMessage, "[Inferno X] Data: Inferno X was executed by "..((Player.Name ~= Player.DisplayName and Player.DisplayName) or "Unknown.."..Player.Name:sub(-2, -1)).." on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." "..VCurrentVersion.." using "..getexploit(), "Execution")
+	pcall(SendMessage, "[LeGioN Hub] Data: LeGioN Hub was executed by "..((Player.Name ~= Player.DisplayName and Player.DisplayName) or "Unknown.."..Player.Name:sub(-2, -1)).." on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." "..VCurrentVersion.." using "..getexploit(), "Execution")
 end)
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
@@ -120,7 +120,7 @@ end
 
 local function Notify(Message, Duration)
 	Rayfield:Notify({
-		Title = "👽 LeGioN Hub X",
+		Title = "👽 LeGioN Hub",
 		Content = Message,
 		Duration = Duration or 5,
 		Image = 4483362458,
@@ -132,12 +132,12 @@ local function CreateWindow()
 	repeat task.wait() until VCurrentVersion
 
 	local Window = Rayfield:CreateWindow({
-		Name = "👽 LeGioN Hub X - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." - "..VCurrentVersion,
-		LoadingTitle = "👽 LeGioN Hub X",
+		Name = "[👽 LeGioN Hub] - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." - "..VCurrentVersion,
+		LoadingTitle = "[👽 LeGioN Hub]",
 		LoadingSubtitle = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
 		ConfigurationSaving = {
 			Enabled = true,
-			FolderName = "InfernoXConfig",
+			FolderName = "LeGioNHubConfig",
 			FileName = game.PlaceId.."-"..Player.Name
 		}
 	})
@@ -313,19 +313,19 @@ local function CreateWindow()
 
 							local function SetSuggestionsWebhook()
 								Webhook = SuggestionsWebhook
-								local success, result = pcall(SendMessage, "[Inferno X] Data: "..((Player.Name ~= Player.DisplayName and Player.DisplayName) or "Unknown.."..Player.Name:sub(-2, -1)).." suggested "..Text.." on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, "Suggestion")
+								local success, result = pcall(SendMessage, "[LeGioN Hub] Data: "..((Player.Name ~= Player.DisplayName and Player.DisplayName) or "Unknown.."..Player.Name:sub(-2, -1)).." suggested "..Text.." on "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, "Suggestion")
 								if success then
 									Notify("Successfully Sent Suggestion", 5)
-									writefile("InfernoXWebhooking2.txt", CurrentTime)
-									print("[Inferno X] Debug: Webhook Delay Set at "..CurrentTime)
+									writefile("LeGioNHubWebhooking2.txt", CurrentTime)
+									print("[LeGioN Hub] Debug: Webhook Delay Set at "..CurrentTime)
 								else
 									Notify("Unsuccessful Sending Suggestion, Error: "..result, 5)
 								end
 							end
 
-							if not isfile("InfernoXWebhooking2.txt") then
+							if not isfile("LeGioNHubWebhooking2.txt") then
 								SetSuggestionsWebhook()
-							elseif tonumber(readfile("InfernoXWebhooking2.txt")) < CurrentTime - 86400 then
+							elseif tonumber(readfile("LeGioNHubWebhooking2.txt")) < CurrentTime - 86400 then
 								SetSuggestionsWebhook()
 							else
 								Webhook = nil
