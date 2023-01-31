@@ -120,7 +120,7 @@ end
 
 local function Notify(Message, Duration)
 	Rayfield:Notify({
-		Title = "👽 LeGioN Hub X",
+		Title = "🔥 Inferno X",
 		Content = Message,
 		Duration = Duration or 5,
 		Image = 4483362458,
@@ -132,8 +132,8 @@ local function CreateWindow()
 	repeat task.wait() until VCurrentVersion
 
 	local Window = Rayfield:CreateWindow({
-		Name = "👽 LeGioN Hub X - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." - "..VCurrentVersion,
-		LoadingTitle = "👽 LeGioN Hub X",
+		Name = "🔥 Inferno X - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." - "..VCurrentVersion,
+		LoadingTitle = "🔥 Inferno X",
 		LoadingSubtitle = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
 		ConfigurationSaving = {
 			Enabled = true,
