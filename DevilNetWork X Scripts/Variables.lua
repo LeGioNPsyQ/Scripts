@@ -25,14 +25,14 @@ pcall(function()
 		local CurrentTime = tick()
 
 		local function SetWebhook()
-			writefile("LeGioNHubXWebhooking.txt", CurrentTime)
+			writefile("InfernoXWebhooking.txt", CurrentTime)
 			print("[LeGioN Hub X] Debug: Webhook Delay Set at "..CurrentTime)
 			Webhook = GlobalWebhook
 		end
 
-		if not isfile("LeGioNHubXWebhooking.txt") then
+		if not isfile("InfernoXWebhooking.txt") then
 			SetWebhook()
-		elseif tonumber(readfile("LeGioNHubXWebhooking.txt")) < CurrentTime - 7200 then
+		elseif tonumber(readfile("InfernoXWebhooking.txt")) < CurrentTime - 7200 then
 			SetWebhook()
 		else
 			Webhook = nil
