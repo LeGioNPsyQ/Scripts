@@ -374,3 +374,17 @@ task.spawn(function()
 		end
 	end
 end)
+
+local Infos = Window:CreateTab("Information", 4483362458)
+Infos:CreateSection("Script Information")
+Infos:CreateToggle({
+	Name = "🛠 Auto Rainbow Pickaxes",
+	Info = "Turns 5 Giant Pickaxe into a Rainbow!",
+	CurrentValue = false,
+	Flag = "RainbowPicks",
+	Callback = function(Value)	end,
+})
+Infos:CreateButton({
+	Name = "Kleiner Test",
+	Info = "Kleiner Test nicht Klicken",
+})
