@@ -374,14 +374,3 @@ task.spawn(function()
 		end
 	end
 end)
-
-local Info = Window:CreateTab("Information", 4483362458)
-
-Info:CreateSection("Script Information")
-
-Info:CreateInfo({
-	Name = "Rainbow Pet/Pickace",
-	Info = "Powered by © LeGioN_PsyQ",
-	Options = Info,
-	Flag = "Info",
-})
