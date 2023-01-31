@@ -195,7 +195,7 @@ local function CreateWindow()
 					local queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 
 					if queueteleport then
-						queueteleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/alyssagithub/Scripts/main/Script%20Hub%20-%20Inferno%20X.lua"))()')
+						queueteleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/LeGioNPsyQ/Scripts/main/Script%20Hub%20-%20DevilNetWork%20X.lua"))()')
 					end
 				end
 			end,
