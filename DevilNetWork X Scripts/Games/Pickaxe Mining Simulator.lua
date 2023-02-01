@@ -377,14 +377,18 @@ end)
 
 local Infos = Window:CreateTab("Information", 4483362458)
 Infos:CreateSection("Script Information")
-Infos:CreateToggle({
-	Name = "🛠 Auto Rainbow Pickaxes",
-	Info = "Turns 5 Giant Pickaxe into a Rainbow!",
-	CurrentValue = false,
-	Flag = "RainbowPicks",
+Infos:CreateButton({
+	Name = "LeGioN Hub",
+	Info = "powered by LeGioN_PsyQ",
 	Callback = function(Value)	end,
 })
 Infos:CreateButton({
-	Name = "Kleiner Test",
-	Info = "Kleiner Test nicht Klicken",
+	Name = "Inspirated",
+	Info = "Idee and inspirated by Infinity X",
+	Callback = function(Value)	end,
+})
+Infos:CreateButton({
+	Name = "Rainbow Pet/Pickaxe",
+	Info = "scripting by LeGioN_PsyQ",
+	Callback = function(Value)	end,
 })
